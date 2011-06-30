@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical"
+  android:background="#ffffff">
+  <LinearLayout
+      android:id="@+id/main_menu_layout01"
+	  android:layout_width="fill_parent"
+	  android:layout_height="80px"
+	  android:orientation="horizontal">
+	   <ImageButton
+		  		android:id="@+id/main_menu01"
+				android:src="@drawable/main_menu01"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu02"
+				android:src="@drawable/main_menu02"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu03"
+				android:src="@drawable/main_menu03"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+		<ImageButton
+		  		android:id="@+id/main_menu04"
+				android:src="@drawable/main_menu04"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+  </LinearLayout>
+  <LinearLayout
+  		android:id="@+id/main_menu_bottom1"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"></LinearLayout>
+  <LinearLayout
+  	  android:id="@+id/main_menu_layout02"
+	  android:layout_width="fill_parent"
+	  android:layout_height="80px"
+	  android:orientation="horizontal"
+	  android:layout_below="@id/main_menu_layout01">
+	   <ImageButton
+		  		android:id="@+id/main_menu05"
+				android:src="@drawable/main_menu05"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu06"
+				android:src="@drawable/main_menu06"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu07"
+				android:src="@drawable/main_menu07"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+		<ImageButton
+		  		android:id="@+id/main_menu08"
+				android:src="@drawable/main_menu08"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+  </LinearLayout>
+  <LinearLayout
+  		android:id="@+id/main_menu_bottom2"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/main_menu_layout02"></LinearLayout>
+  <LinearLayout
+      android:id="@+id/main_menu_layout03"
+	  android:layout_width="fill_parent"
+	  android:layout_height="80px"
+	  android:orientation="horizontal"
+	  android:layout_below="@id/main_menu_bottom2">
+	   <ImageButton
+		  		android:id="@+id/main_menu09"
+				android:src="@drawable/main_menu09"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu10"
+				android:src="@drawable/main_menu10"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>
+		<ImageButton
+		  		android:id="@+id/main_menu11"
+				android:src="@drawable/main_menu11"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+		<ImageButton
+		  		android:id="@+id/main_menu12"
+				android:src="@drawable/main_menu12"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="#a0000000" android:layout_margin="15px"></ImageButton>	
+  </LinearLayout>
+  <LinearLayout
+  		android:id="@+id/main_menu_bottom3"
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content"
+  		android:layout_below="@id/main_menu_layout03"></LinearLayout>
+  
+  
+</RelativeLayout>

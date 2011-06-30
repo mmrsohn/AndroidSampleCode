@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml로 메뉴 아이템 만들기
+		onCreateOptionMenu나 onCreateContextMenu 이벤트 핸들러 안에서 
+		MenuInflater을 이용한다.
+	 -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	android:name="Context Menu">
+	<!-- XML 메뉴 아이템 -->
+	<item android:id="@+id/item01" android:icon="@drawable/main_menu01"
+		android:title="Item 1">
+	</item>
+	<item android:id="@+id/item02" android:checkable="true"
+		android:title="Item 2">
+	</item>
+	<item android:id="@+id/item03" android:numericShortcut="3"
+		android:alphabeticShortcut="3" android:title="Item 3">
+	</item>
+	<item android:id="@+id/item04" android:title="Submenu">
+		<menu>
+			<item android:id="@+id/item05" android:title="Submenu Item">
+			</item>
+		</menu>
+	</item>
+</menu>

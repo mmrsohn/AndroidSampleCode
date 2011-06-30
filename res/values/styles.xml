@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- 치수 -->
+	<dimen name="standard_boader">5dp</dimen>
+	<dimen name="large_font_size">16sp</dimen>
+	<style name="text_size_sample">
+		<item name="android:textSize">8sp</item>
+	</style>
+	
+	<!-- 기본 스타일과  추가되는 스타일 -->
+	<style name="BaseText">
+		<item name="android:textSize">14sp</item>
+		<item name="android:textColor">#111</item>
+	</style>
+	<!-- BaseText를 parent로 스타일 지정 -->
+	<style name="ChildText" parent="BaseText">
+		<item name="android:textSize">8sp</item>
+	</style>
+
+
+
+
+
+	<style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorForeground">#696969</item>
+	</style>
+
+
+
+
+
+
+
+
+	<style name="stockDetailStockTicker">
+		<item name="android:layout_width">80dip</item>
+		<item name="android:layout_height">42dip</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="stockDetailStockMarketPrice">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">42dip</item>
+		<item name="android:paddingRight">25dip</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="stockDetailStockMarketPriceDifferPrice">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">42dip</item>
+		<item name="android:paddingRight">100dip</item>
+		<item name="android:drawablePadding">10dip</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:textColor">#000000</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	
+	<!-- Stock Detail Layout. -->
+	<style name="stockDetailStockNotificationTicker">
+		<item name="android:layout_width">125dip</item>
+		<item name="android:layout_height">42dip</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="stockDetailStockNotificationMarketPrice">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">42dip</item>
+		<item name="android:paddingRight">25dip</item>
+		<item name="android:drawablePadding">10dip</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:textColor">#f19824</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<!-- Setup Layout Style. -->
+	<style name="setupRelativeLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">62dip</item>
+		<item name="android:paddingLeft">15dip</item>
+		<item name="android:paddingRight">15dip</item>
+		<item name="android:background">@color/white</item>
+	</style>	
+	<style name="setupTextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">18sp</item>
+	</style>
+	<style name="setupNotificationTextView">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+	<style name="setupButton">
+		<item name="android:layout_width">115dip</item>
+		<item name="android:layout_height">46dip</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:shadowDx">-1</item>
+		<item name="android:shadowDy">-1</item>
+		<item name="android:shadowColor">@color/gray</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">18sp</item>
+	</style>
+	<style name="setupToggleButton">
+		<item name="android:layout_width">115dip</item>
+		<item name="android:layout_height">46dip</item>
+		<item name="android:shadowRadius">1</item>
+		<item name="android:shadowDx">-1</item>
+		<item name="android:shadowDy">-1</item>
+		<item name="android:shadowColor">@color/gray</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">18sp</item>
+	</style>
+	<style name="setupCheckBox">
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:paddingLeft">35dip</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+	<!-- Search Layout. -->
+	<style name="searchLayout">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">40dip</item>
+		<item name="android:paddingLeft">10dip</item>
+		<item name="android:paddingRight">10dip</item>
+		<item name="android:gravity">center</item>
+	</style>
+	<!-- Search EditText. -->
+	<style name="searchEditText">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">26dip</item>
+		<item name="android:paddingLeft">10dip</item>
+		<item name="android:paddingRight">10dip</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:singleLine">true</item>
+		<item name="android:inputType">text</item>
+		<item name="android:imeOptions">actionDone</item>
+		<!-- item name="android:shadowRadius">1</item>
+		<item name="android:shadowDx">1</item>
+		<item name="android:shadowDy">1</item>
+		<item name="android:shadowColor">@color/gray</item-->
+		<item name="android:textColor">@color/black</item>
+		<item name="android:textSize">14sp</item>
+	</style>
+	
+	
+	
+	<!-- 기본 스타일. -->
+	<style name="lineStyle_1">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">1px</item>
+		<item name="android:background">@color/gray</item>
+	</style>
+
+	<!-- 버튼 기본 스타일. -->	
+	<style name="buttonStyle_1">
+		<item name="android:shadowRadius">1</item>
+		<item name="android:shadowDx">-1</item>
+		<item name="android:shadowDy">-1</item>
+		<item name="android:shadowColor">@color/gray</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">20sp</item>
+	</style>
+</resources>

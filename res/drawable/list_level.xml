@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 레벨 리스트 
+		화면에 표시할 이미지를 코드로 선택하려면 해당 레벨 리스트 드로어블 리소스를 표시하고 있는 뷰에
+		setImageLevel을 호출하고 표시하고자 하는 드로어블 인덱스를 인자로 전달한다
+		ex) imageView.setImageLevel(5);			-->
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:maxLevel="1"  android:drawable="@drawable/m01"/>
+  <item android:maxLevel="2"  android:drawable="@drawable/m02"/>
+  <item android:maxLevel="4"  android:drawable="@drawable/m04"/>
+  <item android:maxLevel="6"  android:drawable="@drawable/m06"/>
+</level-list>

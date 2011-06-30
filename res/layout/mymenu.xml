@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="fill_parent" 
+			  android:layout_height="fill_parent"
+			  android:background="#ffffff">
+	<LinearLayout 
+		android:layout_height="50px" 
+		android:layout_width="fill_parent" 
+		android:background="#ffa500" 
+		android:id="@+id/linearLayout1" 
+		android:layout_alignParentLeft="true">
+			<TextView
+				android:text="마이메뉴"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></TextView>	
+	
+	</LinearLayout>
+		
+	<RelativeLayout 
+		android:id="@+id/myMenuRelativeLayout"
+		android:layout_height="fill_parent" 
+		android:layout_width="fill_parent" 
+		android:background="#33000000" 
+		android:layout_below="@id/linearLayout1">
+		<ImageView
+			android:id="@+id/iuimg"
+			android:src="@drawable/iu"
+			android:layout_height="120px" 
+			android:layout_width="80px" >
+		</ImageView>
+		
+		
+		</RelativeLayout>
+		
+	<LinearLayout 
+		android:layout_height="50px" 
+		android:layout_width="fill_parent" 
+		android:background="#ffa500" 
+		android:id="@+id/linearLayout2" 
+		android:layout_alignParentBottom="true"
+		android:orientation="horizontal">
+			<TextView
+				android:text="히단 메뉴들"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></TextView>
+			<Button
+				android:id="@+id/myMenu_alert_btn"
+				android:text="메뉴선택"
+				android:layout_height="wrap_content" 
+				android:layout_width="wrap_content" ></Button>	
+	</LinearLayout>
+	
+				  
+</RelativeLayout>

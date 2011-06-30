@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="mrsohn.samplecode" android:versionCode="1"
+	android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+				<!-- 	android:name="ApplicationSample"> --><!-- Application 추가 -->
+		<activity android:name=".SampleMainActivity" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		
+		<!--  Activity 를 BroadcastReceiver로 등록하기 -->
+		<!-- 
+		<activity android:name=".BroadcastReceiver.AcvtBrocastActivity" android:label="Activity Broadcast Receiver">
+			<intent-filter>
+				<action android:name="com."/>
+				<category android:name="" />
+				<category android:name="" />
+				<data android:mimeType=""/>
+			</intent-filter>
+		</activity>
+		 -->
+		
+	  	<!-- BroadcastReceiver 액티비티 -->
+		<activity android:name=".BroadcastReceiver.BroadCastReceiverActivity" android:label="" />
+	    <!-- manifest에  receiver 등록하기 -->
+		<receiver android:name=".BroadcastReceiver.BroadCastReceiverEx">
+			<intent-filter>
+				<action android:name="mrsohn.samplecode.FIRE"></action>
+			</intent-filter>
+		</receiver>
+		<!-- receiver 
+			  //자바 코드로  브로드캐스트 리시버 등록
+			  IntentFilter filler = new IntentFilter("mrsohn.samplecode.FIRE"); //BroadcastReceiver의 action 값 
+			  BroadCastReceiverEx r = new BroadCastReceiverEx(); //BroadcastReceiver 클래스
+			  registerReceiver(r, filler);
+			  
+			  //해제할 때는
+			  unregisterReceiver(receiver);
+	  	-->	
+		<!-- 서비스  -->
+		<service android:enabled="true" android:name=".background.ServiceExam"/>
+		
+		
+		<!-- Activity 생명주기 -->
+		<activity android:name=".activityStatus.ActivityStatus" android:label="" />
+		<!-- Drag and Drop 리스트 뷰 -->
+		<activity android:name=".dndlist.DndListActivity" android:label="" />
+		<!-- 팝업 즐겨찾기 메뉴 -->
+		<activity android:name=".mymenu.MyMenuActivity"	android:label="" />
+		<activity android:name=".mymenu.MyMemuCustomDialog"	android:label="" android:theme="@android:style/Theme.Translucent" />
+		 <!-- 이미지 스위처 -->
+		<activity android:name=".imageswitcher.ImageSwitcherActivity" android:label="" />
+		 <!-- 사이트 팝업 메뉴 -->
+		<activity android:name=".sidepopup.SidePopupActivity" android:label="" />
+		 <!-- 메인메뉴2 -->
+		<activity android:name=".mainmenu2.MainMenu2Activity" android:label="" />
+		 <!-- 백라이트 유지 -->
+		<activity android:name=".keepbacklight.KeepBackLightActivity" android:label="" />
+		<!-- 센서 테스트 -->
+		<activity android:name=".sensor.SensorTestActivity" android:label="" />
+		<!-- 인터넷테스트 -->
+		<activity android:name=".internet.InternetActivity" android:label="" />
+		<!-- 위치  -->mrsohn.samplecode.recording
+		<activity android:name=".sensor.GeoLocation" android:label="" />
+		<!-- 오디오테스트 -->
+		<activity android:name=".audioTest.AudioRecordTest" android:label="" />
+		 
+		
+		<!-- 서비스 -->
+		<service android:name="service.ServiceEx" android:enabled="true" />
+		
+		
+				
+	</application>
+	<!-- supports-screens
+	|		지원되는 해상도
+	|		smallScreens		//QVGA(240x320)
+	|		normalScreens		//WQVGA(240x400), HVGA(320x480), WVGA800(480x800)
+	|		largeScreens		//WVGA800(480x800), WVGA854(480x854)
+	|		extraScreens
+	|
+	|	<supports-screens android:resizeable=["true" | "false"]                  
+	|						android:smallScreens=["true" | "false"]                   
+	|						android:normalScreens=["true" | "false"]                   
+	|						android:largeScreens=["true" | "false"]                   
+	|						android:xlargeScreens=["true" | "false"]                  
+	|						android:anyDensity=["true" | "false"] />
+	|-->
+	<supports-screens 
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:anyDensity="false" 
+		android:resizeable="true"/>
+		
+	<!-- 계측 클래스는 실행시에 애플리케이션 컴포넌트들을 테스트 하기 위한 
+		테스트 프레임워클를 제공한다. 이들 클래스는 애플리케이션 자체와 
+		이 애플리케이션이 시스템 리소스를 사용하는 패턴을 모니터하기 위한 고리를 제공한다. 
+		여러분이 애플리케이션을 위해 만든 가각각의 테스트 클래스 마다 새로운 노드를 하나씩 만든다. -->
+		<!-- 
+	<instrumentation android:label="Mrson Test"
+					android:name=".SampleMainActivity"
+					android:targetPackage="mrsohn.samplecode"/>
+	 -->	
+	<uses-permission android:name="android.permission.INTERNET" />
+	 <uses-permission android:name="android.permission.VIBRATE" />
+	 <uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	 <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	 <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	 <uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />
+	 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	 <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+	 <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+	 <uses-permission android:name="android.permission.BACKUP" />
+	 <uses-permission android:name="android.permission.BACKUP_DATA" />
+	 <uses-permission android:name="android.permission.BATTERY_STATS" />
+	 <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+	 <uses-permission android:name="android.permission.BIND_INPUT_METHOD" />
+	 <uses-permission android:name="android.permission.BIND_WALLPAPER" />
+	 <uses-permission android:name="android.permission.BLUETOOTH" />
+	 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	 <uses-permission android:name="android.permission.BRICK" />
+	 <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED" />
+	 <uses-permission android:name="android.permission.BROADCAST_SMS" />
+	 <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+	 <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH" />
+	 <uses-permission android:name="android.permission.CALL_PHONE" />
+	 <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+	 <uses-permission android:name="android.permission.CAMERA" />
+	 <uses-permission android:name="android.permission.CHANGE_BACKGROUND_DATA_SETTING" />
+	 <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+	 <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	 <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	 <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+	 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	 <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+	 <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA" />
+	 <uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES" />
+	 <uses-permission android:name="android.permission.DELETE_CACHE_FILES" />
+	 <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+	 <uses-permission android:name="android.permission.DEVICE_POWER" />
+	 <uses-permission android:name="android.permission.DIAGNOSTIC" />
+	 <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+	 <uses-permission android:name="android.permission.DUMP" />
+	 <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+	 <uses-permission android:name="android.permission.FACTORY_TEST" />
+	 <uses-permission android:name="android.permission.FLASHLIGHT" />
+	 <uses-permission android:name="android.permission.FORCE_BACK" />
+	 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	 <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+	 <uses-permission android:name="android.permission.GET_TASKS" />
+	 <uses-permission android:name="android.permission.GLOBAL_SEARCH" />
+	 <uses-permission android:name="android.permission.GLOBAL_SEARCH_CONTROL" />
+	 <uses-permission android:name="android.permission.HARDWARE_TEST" />
+	 <uses-permission android:name="android.permission.INJECT_EVENTS" />
+	 <uses-permission android:name="android.permission.INSTALL_LOCATION_PROVIDER" />
+	 <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+	 <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+	 <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+	 <uses-permission android:name="android.permission.MANAGE_APP_TOKENS" />
+	 <uses-permission android:name="android.permission.MASTER_CLEAR" />
+	 <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	 <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+	 <uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+	 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	 <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+	 <uses-permission android:name="android.permission.PERFORM_CDMA_PROVISIONING" />
+	 <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+	 <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+	 <uses-permission android:name="android.permission.READ_CALENDAR" />
+	 <uses-permission android:name="android.permission.READ_CONTACTS" />
+	 <uses-permission android:name="android.permission.READ_FRAME_BUFFER" />
+	 <uses-permission android:name="android.permission.READ_HISTORY_BOOKMARKS" />
+	 <uses-permission android:name="android.permission.READ_INPUT_STATE" />
+	 <uses-permission android:name="android.permission.READ_LOGS" />
+	 <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+	 <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	 <uses-permission android:name="android.permission.READ_SMS" />
+	 <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+	 <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+	 <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+	 <uses-permission android:name="android.permission.REBOOT" />
+	 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	 <uses-permission android:name="android.permission.RECEIVE_MMS" />
+	 <uses-permission android:name="android.permission.RECEIVE_SMS" />
+	 <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+	 <uses-permission android:name="android.permission.RECORD_AUDIO" />
+	 <uses-permission android:name="android.permission.REORDER_TASKS" />
+	 <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	 <uses-permission android:name="android.permission.SEND_SMS" />
+	 <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER" />
+	 <uses-permission android:name="android.permission.SET_ALWAYS_FINISH" />
+	 <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
+	 <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+	 <uses-permission android:name="android.permission.SET_ORIENTATION" />
+	 <uses-permission android:name="android.permission.SET_PREFERRED_APPLICATIONS" />
+	 <uses-permission android:name="android.permission.SET_PROCESS_LIMIT" />
+	 <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+	 <uses-permission android:name="android.permission.SET_WALLPAPER" />
+	 <uses-permission android:name="android.permission.SET_WALLPAPER_COMPONENT" />
+	 <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+	 <uses-permission android:name="android.permission.SHUTDOWN" />
+	 <uses-permission android:name="android.permission.SIGNAL_PERSISTENT_PROCESSES" />
+	 <uses-permission android:name="android.permission.STATUS_BAR" />
+	 <uses-permission android:name="android.permission.STOP_APP_SWITCHES" />
+	 <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_READ" />
+	 <uses-permission android:name="android.permission.SUBSCRIBED_FEEDS_WRITE" />
+	 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	 <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" />
+	 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+	 <uses-permission android:name="android.permission.WAKE_LOCK" />
+	 <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+	 <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+	 <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	 <uses-permission android:name="android.permission.WRITE_GSERVICES" />
+	 <uses-permission android:name="android.permission.WRITE_HISTORY_BOOKMARKS" />
+	 <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+	 <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	 <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	 <uses-permission android:name="android.permission.WRITE_SMS" />
+	 <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+	 <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+	 
+	 
+	
+</manifest>
